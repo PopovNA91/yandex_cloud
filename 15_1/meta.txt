@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: nikolay
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEuPXRPcxSFx6zrEI9WWI6EmX1WtM48CYtnVgSpA3snZWjq4auPQugPaANNBVRs4yKdzSiGCycLbEaTDGw+ipkSo8qlx+tRCXlbb/CYlY7f6xpTcL4jh/TXLS6x6OO9Y3CtGo4fFmBu8KNvDuDLh6Pa6uOlXGiWVVRJzPBPcGG2xc/5zuQU8BIqH6/emk54kZ6OPvz2cRgRUmTO2mFN40IGPc/L4mjoLn4d3BlDB0PGkSlAIEo0ORRKSvIts6fCl1B4H5yT+Nbtj6+nEtBgnR62GYwI5A2prw74ZR6H9dsdGIfy3N3kditBrD0ZND5PI1OqKu6ITeeoMAg6tc/Trymdz5NV6DXq28MlBlL7qKdzZqK8d9DrWxcdePKIr8EkThsZ1qk9Il3o3CL51BOpbRZZutqHio34kTmXVVCQZlk/C8+gvhu4hVp9Psf+zdRpg309A5teJ12xyG5N/YyFcOAJsa/TdfseZ6V4wjpjH+aEGnjN2KqaAiM2PyXkyhY+B7MqB2w7z+XtVCmj0/OibzOxpDTuTeaPGchc7+S6UZOygNzPcR3Aem+EYLVHi1u7Oe+LcbXRXvhJvZoZTnt5ttpQl+oZ/LZ0G80jiLKHcHM+M00ajyG9dmdvrCcWGPO2FqqCuvEvfioTodQiT847c06kZFwwmrcCCBuJGGTgFxxrw== popovna91@yandex.ru
