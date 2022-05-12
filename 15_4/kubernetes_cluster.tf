@@ -7,7 +7,7 @@ resource "yandex_resourcemanager_folder_iam_binding" "kub_admin" {
   folder_id = var.ya_folder_id
   role                = "admin"
   members              = ["serviceAccount:${yandex_iam_service_account.kub_admin.id}"]
-  depends_on = [yandex_iam_service_account.web]
+  depends_on = [yandex_iam_service_account.kub_admin]
 }
 
 resource "yandex_iam_service_account" "kub_manager" {
@@ -55,7 +55,7 @@ resource "yandex_kubernetes_cluster" "cluster_netology" {
       }
     }
 
-    version   = "1.14"
+    version   = "1.21"
     public_ip = true
 
     maintenance_policy {
@@ -89,7 +89,7 @@ resource "yandex_kubernetes_node_group" "node_group_netology" {
   cluster_id  = "${yandex_kubernetes_cluster.cluster_netology.id}"
   name        = "node_group_netology"
   description = "node group for fourth lesson"
-  version     = "1.17"
+  version     = "1.21"
 
   instance_template {
     platform_id = "standard-v2"
